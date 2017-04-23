@@ -22,14 +22,26 @@ div:after {
 }
 
 /*css------------body*/
+/*body{background:white; }*/
+#box {
+    width: 1306px;
+    margin: 0 auto;
+    background: white
+}
 
 /*css-------------header*/
-.div_header {
-    width: auto;
-    height: 33px;
-    padding: 0 53px;
+#header {
+    width: 100%;
     background: #F5F5F5;
     border-bottom: 1px solid darkgray;
+}
+
+.div_header {
+    width: 1200px;
+    height: 33px;
+    margin: 0 auto;
+
+    line-height: 33px;
 }
 
 .header_left {
@@ -49,7 +61,29 @@ div:after {
     height: 32px;
     padding: 0 12px;
     float: left;
-    line-height: 32px
+    line-height: 32px;
+    position: relative;
+}
+
+.div_header span {
+    float: left;
+    vertical-align: text-bottom;
+    color: #008852;
+    font-size: 17px;
+}
+
+.div_header li:hover {
+    text-decoration: underline;
+}
+
+#changeCity {
+    position: absolute;
+    top: 30px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    z-index: 120;
+    display: none;
 }
 
 /*css-------------menu   */
@@ -80,6 +114,10 @@ div:after {
     /*background: palevioletred;*/
     line-height: 80px;
     vertical-align: middle;
+}
+
+.div_menu li:hover a {
+    background: #F7F7F7;
 }
 
 .div_menu img {
@@ -115,7 +153,7 @@ div:after {
     position: relative;
 }
 
-.nav_box {
+#nav_box {
     width: 100%;
     height: 340px;
     background: bisque;
@@ -123,13 +161,43 @@ div:after {
     position: relative;
 }
 
-.nav_img {
+#nav_img {
     width: 500%;
     height: 100%;
     position: absolute
 }
 
-.nav_menu {
+#nav_img img {
+    width: 1200px;
+}
+
+#nav_check {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    z-index: 100;
+}
+
+#nav_check li {
+    width: 25px;
+    height: 25px;
+    float: left;
+}
+
+#nav_check li div {
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+#nav_check li:hover div {
+    background: black;
+}
+
+#nav_menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -138,15 +206,22 @@ div:after {
     width: 235px;
 }
 
-.nav_menu li {
+#nav_menu > li {
     height: 25%;
     width: 100%;
     border-bottom: 1px solid gainsboro;
     vertical-align: middle;
-    position: relative;
 }
 
-.nav_menu li a {
+#nav_menu > li:hover {
+    background: #008953;
+}
+
+#nav_menu > li:hover .nav_column {
+    display: block;
+}
+
+#nav_menu > li>a {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -154,7 +229,7 @@ div:after {
 
 }
 
-.nav_menu li a span {
+#nav_menu > li>a span {
     vertical-align: middle;
 }
 
@@ -162,29 +237,94 @@ div:after {
     font-size: 20px;
 }
 
-.nav_column {
-    width: 700px;
-    height: 430px;
+    .nav_column {
+        display: none;
+        width: 700px;
+        height: auto;
+        box-sizing: border-box;
+        border: 1px solid yellowgreen;
+        position: absolute;
+        z-index: 10;
+        left: 234px;
+        top: 0px;
+        background: white;
+        padding: 19px 0 ;
+    }
+
+
+            #columnRepairpad > li {
+                line-height: 45px;
+                float: left;
+                height: 45px;
+                vertical-align: middle;
+                overflow: hidden;
+
+            }
+
+            #columnRepairpad > li span {
+                float: left;
+                vertical-align: middle;
+                text-align: right;
+                width: 150px;
+                height:25px;
+                line-height:25px;
+                padding-right: 10px;
+                font-size: 14px;
+            }
+
+            #columnRepairpad > li a {
+                width: auto;
+                padding: 0 10px;
+                border-left: 1px solid darkgrey;
+                height: 25px;
+                vertical-align: middle;
+                line-height: 25px;
+                float: left;
+            }
+#columnRepairCop li,#columnRepairPhone li,#columnsellPhone li{
+            margin-left:10px;
+            width:100%;
+            height:60px;
+            line-height:60px;
+
+        }
+#columnRepairCop span{
+    float: left;
+    width:100px;
+    height:40px;
+    line-height:40px ;
+    text-align: center;
+    margin:10px 0;
+
+}
+
+
+#columnRepairCop a,#columnRepairPhone a,#columnsellPhone a{
     box-sizing: border-box;
-    border: 1px solid yellowgreen;
-    position: absolute;
-    z-index: 10;
-    left: 234px;
-    top: 0px;
+    float: left;
+    width:115px;
+    height:40px;
+    margin:10px;
+    border:1px solid black;
+    text-align: center;
+    line-height: 40px;
 }
+            .nav_column a:hover {
+                color: #008953;
+            }
 
-.tips-left {
-    border-color: transparent #00B7FF;
-    border-style: solid;
-    font-size: 0;
-    border-width: 10px 10px 10px 0px;
-    position: absolute;
-    left: -10px;
-    top: 33px;
-    z-index: 100;
-    vertical-align: middle;
+        .tips-left {
+            border-color: transparent white;
+            border-style: solid;
+            font-size: 0;
+            border-width: 10px 10px 10px 0px;
+            position: absolute;
+            left: -10px;
+            top: 33px;
+            z-index: 100;
+            vertical-align: middle;
 
-}
+        }
 
 /*css------------------banner*/
 .banner {
@@ -194,18 +334,25 @@ div:after {
 }
 
 .div_banner {
-    width: auto;
+    width: 1200px;
     height: 100%;
-    padding: 0 53px;
+    margin: 0 auto;
     background: white;
+
 }
 
 .div_banner li {
     width: 25%;
     height: 100%;
     float: left;
-    background: gold;
+    /*background: gold;*/
     border-right: 1px solid #F7F7F7;
+    overflow: hidden;
+}
+
+.div_banner img {
+    vertical-align: bottom;
+    width: 100%;
 }
 
 /*css-----------------title*/
@@ -240,24 +387,31 @@ div:after {
     text-align: center;
     line-height: 40px;
 }
-.div_recycle li:first-child{
+
+.div_recycle li:first-child {
     padding-top: 50px;
     line-height: 35px;
 }
-.div_recycle li img{
-    width:auto;
-    height:191px;
-    margin-top:40px;
-    }
-.div_recycle strong{
-    font-family: 幼圆;
-    font-size: 40px;}
-.div_recycle span{font-size: 20px}
-.div_recycle center{
-    width:100%;
-    font-size: 20px;
+
+.div_recycle li img {
+    width: auto;
+    height: 191px;
+    margin-top: 40px;
 }
 
+.div_recycle strong {
+    font-family: 幼圆;
+    font-size: 40px;
+}
+
+.div_recycle span {
+    font-size: 20px
+}
+
+.div_recycle center {
+    width: 100%;
+    font-size: 20px;
+}
 
 /*css-------------repair*/
 .repair {
@@ -358,6 +512,15 @@ div:after {
     line-height: 30px;
     text-align: center;
     font-size: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#map span {
+    vertical-align: middle;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
     vertical-align: middle
 }
 
@@ -372,7 +535,7 @@ div:after {
     position: relative;
     height: 133px;
     padding: 20px 0;
-    border-bottom:1px solid #F7F7F7;
+    border-bottom: 1px solid #F7F7F7;
 }
 
 .repair_list li > a {
@@ -384,8 +547,9 @@ div:after {
     height: 90px;
     background: midnightblue;
 }
-.repair_list li:last-child{
-    border:0;
+
+.repair_list li:last-child {
+    border: 0;
 }
 
 .repair_list span {
@@ -444,7 +608,7 @@ li:hover .div_out {
     display: block;
 }
 
-#goshop {
+.goshop {
     width: 150px;
     height: 50px;
     border: 1px solid green;
@@ -456,8 +620,76 @@ li:hover .div_out {
     margin: 22px 0 auto
 }
 
-#goshop a {
+.goshop a {
     width: 100%;
     height: 100%;
     display: inline-block;
+}
+/*末尾栏________________________*/
+#lastColumn{
+    width:100%;
+    height:290px;
+    background:#FAFAFA ;
+}
+.div_lastColumn{
+    width:984px;
+    height:100%;
+    margin:0 auto;
+    background: yellow;
+}
+/*高德地图______________________*/
+#gaodeMap{
+    display: none;
+    position: fixed;
+    z-index: 200;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+}
+#gaode{
+    width:890px;
+    height: 550px;
+    background: #F7F7F7;
+    margin:0 auto;
+    position: absolute;
+    top:40px;
+    left:0;
+    right:0;
+}
+#gaodeClose{
+    width:25px;
+    height:30px;
+    line-height:30px;
+    vertical-align: middle;
+    font-size: 20px;
+    float: right;
+    cursor: pointer;
+}
+
+.gaodeTop{
+    width:100%;
+    height:30px;
+    /*background:;*/
+}
+.gaodeMin{
+    width:100%;
+    height:455px;
+    background:white;}
+
+
+.gaodeBottom{
+    width:auto;
+    height:auto;
+    margin: 0 auto;
+    /*line-height:60px;*/
+    background: yellow;
+    overflow: hidden;
+    text-align: center;
+}
+.gaodeBottom span{
+    display: inline-block;
+    margin:20px 10px;
+    width:40px;
+    height:40px;
+    border:1px solid black;
 }
